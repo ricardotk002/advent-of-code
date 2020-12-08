@@ -1,4 +1,4 @@
-input = ARGF.read.lines.map(&:strip)
+input = ARGF.read.lines(chomp: true)
 
 def calculate(input, right, down)
   width = input.first.size

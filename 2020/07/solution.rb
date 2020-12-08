@@ -1,7 +1,6 @@
 input = ARGF.read
 
-TREE = input.lines.reduce([]) do |xs, line|
-  line.strip!
+TREE = input.lines(chomp: true).reduce([]) do |xs, line|
   root = line.match(/(\w+ \w+) bags contain/)[1]
   leaves = line.scan(/(\d+) (\w+ \w+) bags?/)
   xs << [root, leaves]

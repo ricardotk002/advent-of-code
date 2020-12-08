@@ -19,7 +19,7 @@ def seat_id(n)
   r * 8 + c
 end
 
-seat_ids = input.lines.map { |n| seat_id(n.strip) }
+seat_ids = input.lines(chomp: true).map { |n| seat_id(n) }
 
 puts seat_ids.max
 
